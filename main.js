@@ -8,13 +8,19 @@ function doubleAll(arr, start = 0, end = arr.length) {
 } 
 
 
-function absoluteValues() {
+function absoluteValues(arr, start = 0, end = arr.length) {
   const newArr =[]
 
   for (let i = 0; i < arr.length; i++) {
-    if(arr)
+    newArr.push(arr[i]);
+    if(newArr <= 0) {
+
+    } else {
+      arr[i] < 0
+    }
   }
-  return 
+  return newArr
+  
 }
 
 function yelledGreetings() {
