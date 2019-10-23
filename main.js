@@ -26,19 +26,22 @@ function yelledGreetings(string) {
   return yelled;
 }
 
-function changeToInitials(arr, start = 0, end = arr.length) {
-  const justInitials = []
-
-  for (let i = 0; i < arr.length; i ++) {
-    justInitials.push(arr[i])
-  }
-
+function changeToInitials(arr) {
+  const initials = arr.map(a => a.split(" ").map(word => word[0]).join(''))
+  return initials;
 }
+
+// console.log(changeToInitials(['Colin Jaffe', 'Mesuara Kaleziq']))
 
 function doubleOdd() {
 }
 
-function upperCaseFirstLetters() {
+function upperCaseFirstLetters(arr) {
+  const changedCase = [];
+  arr.forEach(function(a) {
+    changedCase.push(a.charAt(0).toUpperCase() + a.substr(1).toLowerCase())
+  });
+  return changedCase;
 }
 
 function add1ToLeft() {
