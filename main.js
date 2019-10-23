@@ -1,4 +1,4 @@
-function doubleAll(arr, start = 0, end = arr.length) {
+function doubleAll(arr) {
   const newArr = []
 
   for (let i = 0; i < arr.length; i++) {
@@ -33,7 +33,14 @@ function changeToInitials(arr) {
 
 // console.log(changeToInitials(['Colin Jaffe', 'Mesuara Kaleziq']))
 
-function doubleOdd() {
+function doubleOdd(numbers) {
+  const answers = [];
+
+  for (let i=0; i < numbers.length; i++) {
+    const answer = Math.abs(numbers[i]) % 2 === 1 ? numbers[i]*2 : numbers[i];
+    answers.push(answer)
+  }
+  return answers;
 }
 
 function upperCaseFirstLetters(arr) {
