@@ -8,25 +8,31 @@ function doubleAll(arr, start = 0, end = arr.length) {
 } 
 
 
-function absoluteValues(arr, start = 0, end = arr.length) {
+function absoluteValues(arr) {
   const newArr =[]
-
-  for (let i = 0; i < arr.length; i++) {
-    newArr.push(arr[i]);
-    if(newArr <= 0) {
-
-    } else {
-      arr[i] < 0
+  arr.forEach(a => {
+    if(a>=0){
+      newArr.push(a)
+    }else if(a<0){
+      newArr.push(a*-1)
     }
+  })
+  return newArr;
+}
+
+function yelledGreetings(string) { 
+  const yelled = [];
+  string.forEach(s => yelled.push(s + '!'));
+  return yelled;
+}
+
+function changeToInitials(arr, start = 0, end = arr.length) {
+  const justInitials = []
+
+  for (let i = 0; i < arr.length; i ++) {
+    justInitials.push(arr[i])
   }
-  return newArr
-  
-}
 
-function yelledGreetings() {
-}
-
-function changeToInitials() {
 }
 
 function doubleOdd() {
